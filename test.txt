@@ -12,23 +12,19 @@ Pokemon
   .initialize
     is initialized with keyword arguments of name, type and db
   .save
-    saves an instance of a pokemon with the correct id (FAILED - 1)
+    saves an instance of a pokemon with the correct id
+  .find
 
-Failures:
+[1mFrom:[0m /home/marcusSimon12082015/pokemon-scraper-cb-000/lib/pokemon.rb @ line 21 Pokemon.find:
 
-  1) Pokemon .save saves an instance of a pokemon with the correct id
-     Failure/Error: expect(pikachu_from_db).to eq([[1, "Pikachu", "electric"]])
+    [1;34m15[0m: [32mdef[0m [1;36mself[0m.[1;34mfind[0m(id,db)
+    [1;34m16[0m:   stm = db.prepare [31m[1;31m"[0m[31mSELECT * FROM pokemon WHERE id=?[1;31m"[0m[31m[0m
+    [1;34m17[0m:   stm.bind_param [1;34m1[0m, id
+    [1;34m18[0m:   rs = stm.execute
+    [1;34m19[0m:   row = rs.next
+    [1;34m20[0m:   new_object = [1;34;4mPokemon[0m.new([35mid[0m:row[[1;34m0[0m],[35mname[0m:row[[1;34m1[0m],[35mtype[0m:row[[1;34m2[0m],[35mdb[0m:db)
+ => [1;34m21[0m:   binding.pry
+    [1;34m22[0m:   new_object
+    [1;34m23[0m: [32mend[0m
 
-       expected: [[1, "Pikachu", "electric"]]
-            got: [[1, "Pikachu", "electric", 60]]
-
-       (compared using ==)
-     # ./spec/pokemon_spec.rb:27:in `block (3 levels) in <top (required)>'
-
-Finished in 0.02432 seconds (files took 0.42808 seconds to load)
-6 examples, 1 failure
-
-Failed examples:
-
-rspec ./spec/pokemon_spec.rb:23 # Pokemon .save saves an instance of a pokemon with the correct id
-
+[0G[1] pry(Pokemon)> 
