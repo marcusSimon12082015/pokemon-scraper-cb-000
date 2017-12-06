@@ -14,31 +14,26 @@ Pokemon
   .save
     saves an instance of a pokemon with the correct id
   .find
-    finds a pokemon from the database by their id number and returns a new Pokemon object (FAILED - 1)
+    finds a pokemon from the database by their id number and returns a new Pokemon object
+  BONUS
+    knows that a pokemon have a default hp of 60 (PENDING: Temporarily skipped with xit)
+    alters Pikachu's hp to 59 (PENDING: Temporarily skipped with xit)
+    alters Magikarp's hp (PENDING: Temporarily skipped with xit)
 
-Failures:
+Pending: (Failures listed here are expected and do not affect your suite's status)
 
-  1) Pokemon .find finds a pokemon from the database by their id number and returns a new Pokemon object
-     Failure/Error:
-       def initialize(id:,name:,type:,db:)
-         @id = id
-         @name = name
-         @type = type
-         @db = db
-         @@all << self
-       end
+  1) Pokemon BONUS knows that a pokemon have a default hp of 60
+     # Temporarily skipped with xit
+     # ./spec/pokemon_spec.rb:55
 
-     ArgumentError:
-       wrong number of arguments (given 4, expected 0)
-     # ./lib/pokemon.rb:4:in `initialize'
-     # ./lib/pokemon.rb:19:in `new'
-     # ./lib/pokemon.rb:19:in `find'
-     # ./spec/pokemon_spec.rb:36:in `block (3 levels) in <top (required)>'
+  2) Pokemon BONUS alters Pikachu's hp to 59
+     # Temporarily skipped with xit
+     # ./spec/pokemon_spec.rb:63
 
-Finished in 0.01267 seconds (files took 0.39851 seconds to load)
-7 examples, 1 failure
+  3) Pokemon BONUS alters Magikarp's hp
+     # Temporarily skipped with xit
+     # ./spec/pokemon_spec.rb:69
 
-Failed examples:
-
-rspec ./spec/pokemon_spec.rb:32 # Pokemon .find finds a pokemon from the database by their id number and returns a new Pokemon object
+Finished in 0.01186 seconds (files took 0.40919 seconds to load)
+10 examples, 0 failures, 3 pending
 
