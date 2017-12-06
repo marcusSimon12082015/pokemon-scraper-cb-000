@@ -19,13 +19,13 @@ Pokemon
 Failures:
 
   1) Pokemon .find finds a pokemon from the database by their id number and returns a new Pokemon object
-     Failure/Error: pikachu_from_db = Pokemon.find(1, @db)
+     Failure/Error: expect(pikachu_from_db.id).to eq(1)
 
      NoMethodError:
-       undefined method `find' for Pokemon:Class
-     # ./spec/pokemon_spec.rb:36:in `block (3 levels) in <top (required)>'
+       undefined method `id' for [[1, "Pikachu", "electric"]]:Array
+     # ./spec/pokemon_spec.rb:37:in `block (3 levels) in <top (required)>'
 
-Finished in 0.00952 seconds (files took 0.53439 seconds to load)
+Finished in 0.00903 seconds (files took 0.41957 seconds to load)
 7 examples, 1 failure
 
 Failed examples:
