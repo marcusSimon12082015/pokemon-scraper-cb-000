@@ -15,3 +15,21 @@ Pokemon
     saves an instance of a pokemon with the correct id
   .find
     finds a pokemon from the database by their id number and returns a new Pokemon object (FAILED - 1)
+
+Failures:
+
+  1) Pokemon .find finds a pokemon from the database by their id number and returns a new Pokemon object
+     Failure/Error: new_object = Pokemon.new(row.id,row.name,row.type,nil)
+
+     NoMethodError:
+       undefined method `id' for [1, "Pikachu", "electric"]:SQLite3::ResultSet::ArrayWithTypesAndFields
+     # ./lib/pokemon.rb:19:in `find'
+     # ./spec/pokemon_spec.rb:36:in `block (3 levels) in <top (required)>'
+
+Finished in 0.01327 seconds (files took 0.45684 seconds to load)
+7 examples, 1 failure
+
+Failed examples:
+
+rspec ./spec/pokemon_spec.rb:32 # Pokemon .find finds a pokemon from the database by their id number and returns a new Pokemon object
+
