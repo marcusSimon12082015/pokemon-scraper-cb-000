@@ -13,24 +13,3 @@ Pokemon
     is initialized with keyword arguments of name, type and db
   .save
     saves an instance of a pokemon with the correct id (FAILED - 1)
-
-Failures:
-
-  1) Pokemon .save saves an instance of a pokemon with the correct id
-     Failure/Error:
-       def self.save(id,name,type,db)
-         db.execute("INSERT INTO pokemon VALUES(?,?)",name,type)
-       end
-
-     ArgumentError:
-       wrong number of arguments (given 3, expected 4)
-     # ./lib/pokemon.rb:9:in `save'
-     # ./spec/pokemon_spec.rb:24:in `block (3 levels) in <top (required)>'
-
-Finished in 0.0084 seconds (files took 0.41372 seconds to load)
-6 examples, 1 failure
-
-Failed examples:
-
-rspec ./spec/pokemon_spec.rb:23 # Pokemon .save saves an instance of a pokemon with the correct id
-
