@@ -25,7 +25,7 @@ Failures:
        (compared using ==)
      # ./spec/pokemon_spec.rb:27:in `block (3 levels) in <top (required)>'
 
-Finished in 0.01999 seconds (files took 0.40786 seconds to load)
+Finished in 0.02432 seconds (files took 0.42808 seconds to load)
 6 examples, 1 failure
 
 Failed examples:
