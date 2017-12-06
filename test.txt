@@ -19,13 +19,14 @@ Pokemon
 Failures:
 
   1) Pokemon .find finds a pokemon from the database by their id number and returns a new Pokemon object
-     Failure/Error: expect(pikachu_from_db.id).to eq(1)
+     Failure/Error: new_pokemon.new(pokemon_object.id,pokemon_object.name,pokemon.type,nil)
 
-     NoMethodError:
-       undefined method `id' for [[1, "Pikachu", "electric"]]:Array
-     # ./spec/pokemon_spec.rb:37:in `block (3 levels) in <top (required)>'
+     NameError:
+       undefined local variable or method `new_pokemon' for Pokemon:Class
+     # ./lib/pokemon.rb:16:in `find'
+     # ./spec/pokemon_spec.rb:36:in `block (3 levels) in <top (required)>'
 
-Finished in 0.01581 seconds (files took 0.57509 seconds to load)
+Finished in 0.01005 seconds (files took 0.4614 seconds to load)
 7 examples, 1 failure
 
 Failed examples:
