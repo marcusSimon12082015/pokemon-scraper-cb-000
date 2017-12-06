@@ -16,30 +16,22 @@ Pokemon
   .find
     finds a pokemon from the database by their id number and returns a new Pokemon object
   BONUS
-    knows that a pokemon have a default hp of 60 (FAILED - 1)
+    knows that a pokemon have a default hp of 60
+    alters Pikachu's hp to 59 (FAILED - 1)
 
 Failures:
 
-  1) Pokemon BONUS knows that a pokemon have a default hp of 60
-     Failure/Error: db.execute("INSERT INTO pokemon(id,name,type) VALUES(?,?,?)",1,name,type)
+  1) Pokemon BONUS alters Pikachu's hp to 59
+     Failure/Error: pikachu.alter_hp(59, @db)
 
-     SQLite3::ConstraintException:
-       UNIQUE constraint failed: pokemon.id
-     # /usr/local/rvm/gems/ruby-2.3.1/gems/sqlite3-1.3.11/lib/sqlite3/statement.rb:108:in `step'
-     # /usr/local/rvm/gems/ruby-2.3.1/gems/sqlite3-1.3.11/lib/sqlite3/statement.rb:108:in `block in each'
-     # /usr/local/rvm/gems/ruby-2.3.1/gems/sqlite3-1.3.11/lib/sqlite3/statement.rb:107:in `loop'
-     # /usr/local/rvm/gems/ruby-2.3.1/gems/sqlite3-1.3.11/lib/sqlite3/statement.rb:107:in `each'
-     # /usr/local/rvm/gems/ruby-2.3.1/gems/sqlite3-1.3.11/lib/sqlite3/database.rb:158:in `to_a'
-     # /usr/local/rvm/gems/ruby-2.3.1/gems/sqlite3-1.3.11/lib/sqlite3/database.rb:158:in `block in execute'
-     # /usr/local/rvm/gems/ruby-2.3.1/gems/sqlite3-1.3.11/lib/sqlite3/database.rb:95:in `prepare'
-     # /usr/local/rvm/gems/ruby-2.3.1/gems/sqlite3-1.3.11/lib/sqlite3/database.rb:134:in `execute'
-     # ./lib/pokemon.rb:13:in `save'
-     # ./spec/pokemon_spec.rb:48:in `block (3 levels) in <top (required)>'
+     NoMethodError:
+       undefined method `alter_hp' for #<Pokemon:0x000000026eeab8>
+     # ./spec/pokemon_spec.rb:64:in `block (3 levels) in <top (required)>'
 
-Finished in 0.01424 seconds (files took 0.4225 seconds to load)
-8 examples, 1 failure
+Finished in 0.01212 seconds (files took 0.46487 seconds to load)
+9 examples, 1 failure
 
 Failed examples:
 
-rspec ./spec/pokemon_spec.rb:55 # Pokemon BONUS knows that a pokemon have a default hp of 60
+rspec ./spec/pokemon_spec.rb:63 # Pokemon BONUS alters Pikachu's hp to 59
 
