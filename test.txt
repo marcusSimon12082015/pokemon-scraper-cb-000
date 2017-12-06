@@ -13,3 +13,22 @@ Pokemon
     is initialized with keyword arguments of name, type and db
   .save
     saves an instance of a pokemon with the correct id (FAILED - 1)
+
+Failures:
+
+  1) Pokemon .save saves an instance of a pokemon with the correct id
+     Failure/Error: expect(pikachu_from_db).to eq([[1, "Pikachu", "electric"]])
+
+       expected: [[1, "Pikachu", "electric"]]
+            got: [[1, "Pikachu", "electric", nil]]
+
+       (compared using ==)
+     # ./spec/pokemon_spec.rb:27:in `block (3 levels) in <top (required)>'
+
+Finished in 0.03836 seconds (files took 0.54616 seconds to load)
+6 examples, 1 failure
+
+Failed examples:
+
+rspec ./spec/pokemon_spec.rb:23 # Pokemon .save saves an instance of a pokemon with the correct id
+
