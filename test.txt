@@ -1,0 +1,36 @@
+Run options: include {:focus=>true}
+
+All examples were filtered out; ignoring {:focus=>true}
+
+schema_migration.sql
+  creates pokemon table
+  has an autoincrementing id column
+  has a name column
+  has a type column
+
+Pokemon
+  .initialize
+    is initialized with keyword arguments of name, type and db
+  .save
+    saves an instance of a pokemon with the correct id (FAILED - 1)
+
+Failures:
+
+  1) Pokemon .save saves an instance of a pokemon with the correct id
+     Failure/Error:
+       def self.save(id,name,type,db)
+         db.execute("INSERT INTO pokemon VALUES(?,?,?)",id,name,type)
+       end
+
+     ArgumentError:
+       wrong number of arguments (given 3, expected 4)
+     # ./lib/pokemon.rb:9:in `save'
+     # ./spec/pokemon_spec.rb:24:in `block (3 levels) in <top (required)>'
+
+Finished in 0.00892 seconds (files took 0.43908 seconds to load)
+6 examples, 1 failure
+
+Failed examples:
+
+rspec ./spec/pokemon_spec.rb:23 # Pokemon .save saves an instance of a pokemon with the correct id
+
