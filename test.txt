@@ -25,7 +25,7 @@ Failures:
        undefined method `id' for [[1, "Pikachu", "electric"]]:Array
      # ./spec/pokemon_spec.rb:37:in `block (3 levels) in <top (required)>'
 
-Finished in 0.00903 seconds (files took 0.41957 seconds to load)
+Finished in 0.01581 seconds (files took 0.57509 seconds to load)
 7 examples, 1 failure
 
 Failed examples:
