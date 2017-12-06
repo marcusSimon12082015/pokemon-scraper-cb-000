@@ -18,7 +18,7 @@ class Pokemon
     rs = stm.execute
     row = rs.next
     new_object = Pokemon.new(id:row[0],name:row[1],type:row[2],db:db,hp:60)
-    binding.pry
+    #binding.pry
     new_object
   end
 end
