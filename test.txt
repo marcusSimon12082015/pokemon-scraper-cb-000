@@ -12,25 +12,4 @@ Pokemon
   .initialize
     is initialized with keyword arguments of name, type and db
   .save
-    saves an instance of a pokemon with the correct id
-  .find
-    finds a pokemon from the database by their id number and returns a new Pokemon object
-  BONUS
-    knows that a pokemon have a default hp of 60 (FAILED - 1)
-
-Failures:
-
-  1) Pokemon BONUS knows that a pokemon have a default hp of 60
-     Failure/Error: @sql_runner.execute_create_hp_column
-
-     Errno::ENOENT:
-       No such file or directory @ rb_sysopen - db/alter_table_migration.sql
-     # ./spec/pokemon_spec.rb:46:in `block (3 levels) in <top (required)>'
-
-Finished in 0.01575 seconds (files took 0.46349 seconds to load)
-8 examples, 1 failure
-
-Failed examples:
-
-rspec ./spec/pokemon_spec.rb:55 # Pokemon BONUS knows that a pokemon have a default hp of 60
-
+    saves an instance of a pokemon with the correct id (FAILED - 1)
