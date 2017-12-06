@@ -1,0 +1,16 @@
+Run options: include {:focus=>true}
+
+All examples were filtered out; ignoring {:focus=>true}
+
+schema_migration.sql
+  creates pokemon table
+  has an autoincrementing id column
+  has a name column
+  has a type column
+
+Pokemon
+  .initialize
+    is initialized with keyword arguments of name, type and db
+  .save
+    saves an instance of a pokemon with the correct id
+  .find
