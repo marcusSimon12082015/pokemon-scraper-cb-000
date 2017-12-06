@@ -15,8 +15,8 @@ class Pokemon
     stm = db.prepare "SELECT * FROM pokemon WHERE id=?"
     stm.bind_param 1, id
     rs = stm.execute
-    binding.pry
     row = rs.next
+    binding.pry
     new_object = Pokemon.new(row.id,row.name,row.type,nil)
     new_object
   end
