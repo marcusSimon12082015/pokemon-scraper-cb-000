@@ -12,25 +12,23 @@ Pokemon
   .initialize
     is initialized with keyword arguments of name, type and db
   .save
-    saves an instance of a pokemon with the correct id (FAILED - 1)
+    saves an instance of a pokemon with the correct id
+  .find
+    finds a pokemon from the database by their id number and returns a new Pokemon object (FAILED - 1)
 
 Failures:
 
-  1) Pokemon .save saves an instance of a pokemon with the correct id
-     Failure/Error:
-       def self.save(id,name,type,db)
-         db.execute("INSERT INTO pokemon(id,name,type) VALUES(?,?,?)",1,name,type)
-       end
+  1) Pokemon .find finds a pokemon from the database by their id number and returns a new Pokemon object
+     Failure/Error: pikachu_from_db = Pokemon.find(1, @db)
 
-     ArgumentError:
-       wrong number of arguments (given 3, expected 4)
-     # ./lib/pokemon.rb:11:in `save'
-     # ./spec/pokemon_spec.rb:24:in `block (3 levels) in <top (required)>'
+     NoMethodError:
+       undefined method `find' for Pokemon:Class
+     # ./spec/pokemon_spec.rb:36:in `block (3 levels) in <top (required)>'
 
-Finished in 0.01118 seconds (files took 0.51026 seconds to load)
-6 examples, 1 failure
+Finished in 0.00952 seconds (files took 0.53439 seconds to load)
+7 examples, 1 failure
 
 Failed examples:
 
-rspec ./spec/pokemon_spec.rb:23 # Pokemon .save saves an instance of a pokemon with the correct id
+rspec ./spec/pokemon_spec.rb:32 # Pokemon .find finds a pokemon from the database by their id number and returns a new Pokemon object
 
