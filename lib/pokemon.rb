@@ -1,7 +1,7 @@
 class Pokemon
   attr_accessor :id,:name,:type, :db,:hp
   @@all = []
-  def initialize(id:,name:,type:,db:,hp=nil)
+  def initialize(id:,name:,type:,db:,hp:)
     @id = id
     @name = name
     @type = type
@@ -17,7 +17,7 @@ class Pokemon
     stm.bind_param 1, id
     rs = stm.execute
     row = rs.next
-    new_object = Pokemon.new(id:row[0],name:row[1],type:row[2],db:db,60)
+    new_object = Pokemon.new(id:row[0],name:row[1],type:row[2],db:db,hp:60)
     #binding.pry
     new_object
   end
