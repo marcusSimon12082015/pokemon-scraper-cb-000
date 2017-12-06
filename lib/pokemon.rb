@@ -13,8 +13,8 @@ class Pokemon
   end
   def self.find(id,db)
     stm = db.prepare "SELECT * FROM pokemon WHERE id=?"
-    stm.bind_param 1, id 
-    rs = stm.execute 
+    stm.bind_param 1, id
+    rs = stm.execute
     row = rs.next
     new_object = Pokemon.new(row.id,row.name,row.type,nil)
     new_object
