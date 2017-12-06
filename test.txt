@@ -29,13 +29,13 @@ Failures:
        end
 
      ArgumentError:
-       wrong number of arguments (given 4, expected 0)
+       wrong number of arguments (given 3, expected 0)
      # ./lib/pokemon.rb:4:in `initialize'
      # ./lib/pokemon.rb:19:in `new'
      # ./lib/pokemon.rb:19:in `find'
      # ./spec/pokemon_spec.rb:36:in `block (3 levels) in <top (required)>'
 
-Finished in 0.0085 seconds (files took 0.40246 seconds to load)
+Finished in 0.01074 seconds (files took 0.60918 seconds to load)
 7 examples, 1 failure
 
 Failed examples:
