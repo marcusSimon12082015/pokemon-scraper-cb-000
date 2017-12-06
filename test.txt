@@ -18,3 +18,22 @@ Pokemon
   BONUS
     knows that a pokemon have a default hp of 60
     alters Pikachu's hp to 59 (FAILED - 1)
+
+Failures:
+
+  1) Pokemon BONUS alters Pikachu's hp to 59
+     Failure/Error: expect(Pokemon.find(1, @db).hp).to eq(59)
+
+       expected: 59
+            got: nil
+
+       (compared using ==)
+     # ./spec/pokemon_spec.rb:65:in `block (3 levels) in <top (required)>'
+
+Finished in 0.03017 seconds (files took 0.43612 seconds to load)
+9 examples, 1 failure
+
+Failed examples:
+
+rspec ./spec/pokemon_spec.rb:63 # Pokemon BONUS alters Pikachu's hp to 59
+
