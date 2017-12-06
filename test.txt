@@ -19,7 +19,7 @@ Failures:
   1) Pokemon .save saves an instance of a pokemon with the correct id
      Failure/Error:
        def self.save(id,name,type,db)
-         db.execute("INSERT INTO pokemon VALUES(?,?,?)",id,name,type)
+         db.execute("INSERT INTO pokemon VALUES(?,?)",name,type)
        end
 
      ArgumentError:
@@ -27,7 +27,7 @@ Failures:
      # ./lib/pokemon.rb:9:in `save'
      # ./spec/pokemon_spec.rb:24:in `block (3 levels) in <top (required)>'
 
-Finished in 0.00892 seconds (files took 0.43908 seconds to load)
+Finished in 0.0084 seconds (files took 0.41372 seconds to load)
 6 examples, 1 failure
 
 Failed examples:
